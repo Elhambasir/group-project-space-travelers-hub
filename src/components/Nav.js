@@ -1,5 +1,3 @@
-export const Nav = () => {
-return <nav>
-    
-</nav>
-}
+const Nav = () => <nav />;
+
+export default Nav;
