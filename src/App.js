@@ -4,10 +4,13 @@ import './App.css';
 import MyProfile from './components/MyProfile';
 import Missions from './components/Missions';
 import Rockets from './components/Rockets';
+import { Provider } from 'react-redux';
+import { store } from './redux/store';
 
 function App() {
   return (
     <>
+    <Provider store={store}>
       <BrowserRouter>
         <Nav />
         <Routes>
@@ -17,6 +20,7 @@ function App() {
           <Route path="*" element={<h3>No Match</h3>} />
         </Routes>
       </BrowserRouter>
+      </Provider>
     </>
   );
 }
