@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 
 const links = [
-  { path: '/', text: 'Rockets' },
+  { path: '/Rockets', text: 'Rockets' },
   { path: '/MyProfile', text: 'My Profile' },
   { path: '/Missions', text: 'Missions' },
 ];
