@@ -1,10 +1,16 @@
-import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Nav from './components/Nav';
+import './App.css';
 
 function App() {
   return (
     <>
-      <Nav />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Nav />} />
+          <Route path="*" element={<h3>No Match</h3>} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
