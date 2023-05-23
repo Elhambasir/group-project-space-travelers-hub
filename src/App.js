@@ -9,8 +9,8 @@ function App() {
   return (
     <>
       <BrowserRouter>
+        <Nav />
         <Routes>
-          <Route path="/" element={<Nav />} />
           <Route path="/Rockets" element={<Rockets />} />
           <Route path="/MyProfile" element={<MyProfile />} />
           <Route path="/Missions" element={<Missions />} />
