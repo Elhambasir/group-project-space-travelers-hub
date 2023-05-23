@@ -9,7 +9,6 @@ export const getAPI = createAsyncThunk(
  'Rockets/fetchRocket', async () =>{ 
   try{
   const response = await axios.get(url)
-    console.log(response.data)
     return response.data
   } catch(err){
     return err.message
@@ -36,8 +35,18 @@ const initialState = {
         state.isLoading = true;
       })
       .addCase(getAPI.fulfilled, (state,action) => {
-        state.rocketList = action.payload
-        
+        let rockets = []
+        action.payload.map((item) => {
+            let newRocket = {}
+            newRocket = {
+                id: item.id,
+                name: item.rocket_name,
+                type: item.rocket_type,
+                images: item.flickr_images
+            }
+            rockets.push(newRocket)
+        })
+        console.log(rockets)
         state.isLoading = false
       })
       .addCase(getAPI.rejected, (state,action) => {
