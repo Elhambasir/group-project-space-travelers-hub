@@ -1,14 +1,16 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { fetchAPI } from '../redux/mission/missionSlice';
+import { fetchMissions } from '../redux/mission/missionSlice';
 
 const Mission = () => {
   const dispatch = useDispatch();
-  const store = useSelector((store) => store.missions);
+  const missions = useSelector((store) => store.missions);
   useEffect(() => {
-    dispatch(fetchAPI());
+    if (!missions.length) dispatch(fetchMissions());
   }, [dispatch]);
-  console.log(store);
+  return (
+    <div>hello world</div>
+  );
 };
 
 export default Mission;
