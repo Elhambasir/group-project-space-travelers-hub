@@ -25,16 +25,15 @@ const rocketsSlice = createSlice({
   name: 'rockets',
   initialState,
   reducers: {
-    reservation: (state,action) => {
-      const id = action.payload
-      console.log(id)
-      state.RocketList = state.RocketList.map(rocket => {
-        if(rocket.id !== id) {
-            return rocket}
-            else {
-        return { ...rocket, reserved: true }};
-    });
-    }
+    reservation: (state, action) => {
+      const id = action.payload;
+      state.RocketList = state.RocketList.map((rocket) => {
+        if (rocket.id !== id) {
+          return rocket;
+        }
+        return { ...rocket, reserved: true };
+      });
+    },
   },
   extraReducers(builder) {
     builder
@@ -52,7 +51,6 @@ const rocketsSlice = createSlice({
             images: item.flickr_images[1],
             reserved: false,
           };
-          console.log(newRocket)
           return rockets.push(newRocket);
         });
         state.RocketList = rockets;
@@ -67,6 +65,6 @@ const rocketsSlice = createSlice({
   },
 });
 
-export const {reservation} = rocketsSlice.actions
+export const { reservation } = rocketsSlice.actions;
 
 export default rocketsSlice.reducer;
