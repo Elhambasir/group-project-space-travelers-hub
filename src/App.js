@@ -8,15 +8,15 @@ import Missions from './components/Mission';
 function App() {
   return (
     <>
-        <BrowserRouter>
-          <Nav />
-          <Routes>
-            <Route path="/Rockets" element={<RocketList />} />
-            <Route path="/MyProfile" element={<MyProfile />} />
-            <Route path="/Mission" element={<Missions />} />
-            <Route path="*" element={<h3>No Match</h3>} />
-          </Routes>
-        </BrowserRouter>
+      <BrowserRouter>
+        <Nav />
+        <Routes>
+          <Route path="/Rockets" element={<RocketList />} />
+          <Route path="/MyProfile" element={<MyProfile />} />
+          <Route path="/Mission" element={<Missions />} />
+          <Route path="*" element={<h3>No Match</h3>} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
