@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 const links = [
   { path: '/Rockets', text: 'Rockets' },
   { path: '/MyProfile', text: 'My Profile' },
-  { path: '/Missions', text: 'Missions' },
+  { path: '/Mission', text: 'Mission' },
 ];
 const Nav = () => (
   <>
