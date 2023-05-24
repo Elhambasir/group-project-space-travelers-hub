@@ -13,7 +13,7 @@ function App() {
           <Routes>
             <Route path="/Rockets" element={<RocketList />} />
             <Route path="/MyProfile" element={<MyProfile />} />
-            <Route path="/Missions" element={<Missions />} />
+            <Route path="/Mission" element={<Missions />} />
             <Route path="*" element={<h3>No Match</h3>} />
           </Routes>
         </BrowserRouter>
