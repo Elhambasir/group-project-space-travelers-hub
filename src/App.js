@@ -2,8 +2,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Nav from './components/Nav';
 import './App.css';
 import MyProfile from './components/MyProfile';
+import RocketList from './components/RocketsList';
 import Missions from './components/Mission';
-import Rockets from './components/Rockets';
 
 function App() {
   return (
@@ -11,9 +11,9 @@ function App() {
       <BrowserRouter>
         <Nav />
         <Routes>
-          <Route path="/Rockets" element={<Rockets />} />
+          <Route path="/Rockets" element={<RocketList />} />
           <Route path="/MyProfile" element={<MyProfile />} />
-          <Route path="/Missions" element={<Missions />} />
+          <Route path="/Mission" element={<Missions />} />
           <Route path="*" element={<h3>No Match</h3>} />
         </Routes>
       </BrowserRouter>
