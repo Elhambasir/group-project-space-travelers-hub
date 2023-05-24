@@ -1,6 +1,4 @@
-import { useSelector, useDispatch } from 'react-redux';
-import { useEffect } from 'react';
-import { getAPI } from '../redux/Rockets/rocketsSlice';
+import PropTypes from 'prop-types';
 
 const Rocket = (props) => {
   const {
@@ -13,6 +11,13 @@ const Rocket = (props) => {
       <div>{disc}</div>
     </div>
   );
+};
+
+Rocket.propTypes = {
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  disc: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
 };
 
 export default Rocket;

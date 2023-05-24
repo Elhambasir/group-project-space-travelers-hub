@@ -4,7 +4,6 @@ import Nav from './components/Nav';
 import './App.css';
 import MyProfile from './components/MyProfile';
 import Missions from './components/Missions';
-import Rockets from './components/Rockets';
 import RocketList from './components/RocketsList';
 import store from './redux/store';
 

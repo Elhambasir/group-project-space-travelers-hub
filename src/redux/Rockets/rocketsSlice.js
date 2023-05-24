@@ -41,7 +41,6 @@ const rocketsSlice = createSlice({
             disc: item.description,
             images: item.flickr_images[1],
           };
-          console.log(newRocket.images)
           return rockets.push(newRocket);
         });
         state.RocketList = rockets;
