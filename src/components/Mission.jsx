@@ -1,4 +1,4 @@
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchMissions } from '../redux/mission/missionSlice';
 
@@ -7,7 +7,7 @@ const Mission = () => {
   const missions = useSelector((store) => store.missions);
   useEffect(() => {
     if (!missions.length) dispatch(fetchMissions());
-  }, [dispatch]);
+  }, [dispatch]); // eslint-disable-line
   return (
     <div>hello world</div>
   );

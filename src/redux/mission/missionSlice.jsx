@@ -32,7 +32,6 @@ export const MissionsSlice = createSlice({
   extraReducers: {
     [fetchMissions.fulfilled]: (state, action) => {
       state.push(action.payload);
-      console.log(action.payload);
     },
   },
 });
