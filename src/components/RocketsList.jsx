@@ -19,7 +19,7 @@ const RocketList = () => {
             key={item.id}
             name={item.name}
             disc={item.disc}
-            image={item.image}
+            image={item.images}
           />
         ))}
       </div>
