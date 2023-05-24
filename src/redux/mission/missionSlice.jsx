@@ -26,12 +26,13 @@ const MissionSlice = createSlice({
   initialState,
   reducers: {
   },
-  extraReducers(builder) {
-    builder
-      .addCase(fetchAPI.pending, (state) => {
-        state.isLoading = true;
-      })
+  extraReducers: (builder) => {
+    builder.addCase(fetchAPI.pending, (state) => {
+      const newState = state;
+      newState.isLoading = true;
+    })
       .addCase(fetchAPI.fulfilled, (state, action) => {
+        const newState = state;
         const mission = [];
         action.payload.map((item) => {
           let newMission = {};
@@ -42,14 +43,15 @@ const MissionSlice = createSlice({
           };
           return mission.push(newMission);
         });
-        state.missionList = mission;
-        state.isLoading = false;
+        newState.missionList = mission;
+        newState.isLoading = false;
       })
       .addCase(fetchAPI.rejected, (state, action) => {
-        state.isLoading = false;
-        state.rocketList = [];
+        const newState = state;
+        newState.isLoading = false;
+        newState.rocketList = [];
 
-        state.error = action.error.message;
+        newState.error = action.error.message;
       });
   },
 });
