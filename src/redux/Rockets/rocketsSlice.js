@@ -16,8 +16,8 @@ export const getAPI = createAsyncThunk(
 );
 
 const initialState = {
-  rocketList: [],
-  isLoading: false,
+  RocketList: [],
+  isLoading: true,
   error: undefined,
 };
 
@@ -38,17 +38,17 @@ const rocketsSlice = createSlice({
           newRocket = {
             id: item.id,
             name: item.rocket_name,
-            type: item.rocket_type,
+            disc: item.description,
             images: item.flickr_images,
           };
           return rockets.push(newRocket);
         });
-        state.rocketList = rockets;
+        state.RocketList = rockets;
         state.isLoading = false;
       })
       .addCase(getAPI.rejected, (state, action) => {
         state.isLoading = false;
-        state.rocketList = [];
+        state.RocketList = [];
 
         state.error = action.error.message;
       });
