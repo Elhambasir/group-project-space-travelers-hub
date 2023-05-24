@@ -6,14 +6,14 @@ const Rocket = (props) => {
   const dispatch = useDispatch()
 
   const {
-    id, name, disc, image,
+    id, name, disc, image, Reservation
   } = props;
   return (
     <div key={id}>
       <img src={image} alt={name} />
       <div>{name}</div>
       <div>{disc}</div>
-      <button onClick={() => {dispatch(reservation({name}))}}>Reservation</button>
+      <button onClick={() => {dispatch(reservation(Reservation))}}>Reservation</button>
     </div>
   );
 };
