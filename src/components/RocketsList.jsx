@@ -5,7 +5,9 @@ import { getAPI } from '../redux/Rockets/rocketsSlice';
 
 const RocketList = () => {
   const dispatch = useDispatch();
-  const { RocketList, isLoading, error,reserved } = useSelector((store) => store.rockets);
+  const {
+    RocketList, isLoading, error,
+  } = useSelector((store) => store.rockets);
   useEffect(() => {
     dispatch(getAPI());
   }, [dispatch]);
@@ -18,10 +20,17 @@ const RocketList = () => {
           <Rocket
             key={item.id}
             name={item.name}
-            disc={item.reserved ? (<div><span>Reserved </span>{item.disc}</div>):(item.disc)}
+            disc={item.reserved ? (
+              <div>
+                <span>Reserved </span>
+                {item.disc}
+              </div>
+            ) : (item.disc)}
             image={item.images}
             Reservation={item.id}
-            reservationState={item.reserved ? (<div>Cancel Reservation</div>) : (<div>Reserve rocket</div>)}
+            reservationState={
+              item.reserved ? (<div>Cancel Reservation</div>) : (<div>Reserve rocket</div>)
+}
           />
         ))}
       </div>

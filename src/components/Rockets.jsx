@@ -7,7 +7,7 @@ const Rocket = (props) => {
   const dispatch = useDispatch();
 
   const {
-    id, name, disc, image, Reservation,reservationState
+    id, name, disc, image, Reservation, reservationState,
   } = props;
   return (
     <div key={id}>
@@ -25,6 +25,7 @@ Rocket.propTypes = {
   disc: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   Reservation: PropTypes.number.isRequired,
+  reservationState: PropTypes.number.isRequired,
 };
 
 export default Rocket;
