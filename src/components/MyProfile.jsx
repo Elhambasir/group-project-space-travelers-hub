@@ -35,8 +35,10 @@ const Rocket = () => {
 
 const MyProfile = () => (
   <>
-    <Mission />
-    <Rocket />
+   <Container className="d-flex">
+      <Mission />
+      <Rocket />
+    </Container>
   </>
 );
 
