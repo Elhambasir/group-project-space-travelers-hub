@@ -4,7 +4,7 @@ import { Badge, Button, Container } from 'react-bootstrap';
 import Table from 'react-bootstrap/Table';
 import 'bootstrap/dist/css/bootstrap.css';
 
-import { fetchMissions, joinMission } from '../redux/mission/missionSlice';
+import { fetchMissions, joinMission, leaveMission } from '../redux/mission/missionSlice';
 
 const Mission = () => {
   const dispatch = useDispatch();
@@ -26,8 +26,8 @@ const Mission = () => {
           <tr key={item.id}>
             <td>{item.name}</td>
             <td>{item.desc}</td>
-            <td><Badge bg="success">test</Badge></td>
-            <td><Button as="a" className="bg-primary" onClick={() => dispatch(joinMission(item.id))}>Join Mission</Button></td>
+            <td><Badge bg={!item.reserved ? 'secondary' : 'success'}>{!item.reserved ? 'NOT A MEMBER' : 'Active Member'}</Badge></td>
+            <td><Button as="a" className={!item.reserved ? 'bg-primary' : 'bg-danger'} onClick={() => (item.reserved ? dispatch(joinMission(item.id)) : dispatch(leaveMission(item.id)))}>{!item.reserved ? 'Join Mission' : 'Leave Mission'}</Button></td>
           </tr>
         ))}
       </Table>

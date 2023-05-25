@@ -21,13 +21,13 @@ const missionSlice = createSlice({
     joinMission: (state, action) => {
       // eslint-disable-next-line no-param-reassign
       state.missions = state.missions.map((mission) => (mission.id === action.payload
-        ? { ...mission, reserved: true }
+        ? { ...mission, reserved: !mission.reserved }
         : mission));
     },
     leaveMission: (state, action) => {
       // eslint-disable-next-line no-param-reassign
       state.missions = state.missions.map((mission) => (mission.id === action.payload
-        ? { ...mission, reserved: false }
+        ? { ...mission, reserved: !mission.reserved }
         : mission));
     },
   },
