@@ -6,7 +6,7 @@ export const fetchMissions = createAsyncThunk('missions/fetchMissions', async ()
   try {
     const res = await fetch(url);
     const data = await res.json();
-    return data.map((item) => item);
+    return data;
   } catch (error) {
     throw new Error('Failed to fetch missions.');
   }

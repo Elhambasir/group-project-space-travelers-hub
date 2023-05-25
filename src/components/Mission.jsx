@@ -16,7 +16,8 @@ const Mission = () => {
   const missions = useSelector((store) => store.missions);
   useEffect(() => {
     if (!missions.length) dispatch(fetchMissions());
-  }, [dispatch]);
+  }, []);
+  console.log(missions);
   return (
     <Container className="mt-4 mb-4 bg-light">
       <Table striped responsive bordered hover className="table">
