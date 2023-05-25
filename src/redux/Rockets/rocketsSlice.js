@@ -30,6 +30,10 @@ const rocketsSlice = createSlice({
       state.RocketList = state.RocketList.map((rocket) => {
         if (rocket.id !== id) {
           return rocket;
+        } if (rocket.id === id) {
+          if (rocket.reserved === true) {
+            return { ...rocket, reserved: false };
+          }
         }
         return { ...rocket, reserved: true };
       });
