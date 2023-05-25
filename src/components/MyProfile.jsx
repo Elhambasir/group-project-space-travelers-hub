@@ -31,14 +31,13 @@ const Rocket = () => {
       </ListGroup>
     </Container>
   );
-}
+};
 
-const MyProfile = () => {
-  return(<>
-  <Mission/>
-  <Rocket/>
-  </>)
-}
-
+const MyProfile = () => (
+  <>
+    <Mission />
+    <Rocket />
+  </>
+);
 
 export default MyProfile;

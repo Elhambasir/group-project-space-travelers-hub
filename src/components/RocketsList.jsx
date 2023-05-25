@@ -10,7 +10,7 @@ const RocketList = () => {
   } = useSelector((store) => store.rockets);
   useEffect(() => {
     dispatch(getAPI());
-  }, [error]);
+  }, [dispatch]);
   if (isLoading === true) {
     return <div>Loading</div>;
   } if (isLoading === false) {
