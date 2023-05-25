@@ -4,11 +4,14 @@ import 'bootstrap/dist/css/bootstrap.css';
 
 const links = [
   { path: '/Rockets', text: 'Rockets' },
-  { path: '/MyProfile', text: 'My Profile' },
   { path: '/Mission', text: 'Mission' },
+  { path: '/MyProfile', text: 'My Profile' },
 ];
 const Nav = () => (
   <Container>
+    <img className='Logo'
+    src='https://spacetravellerhubcapstone.netlify.app/static/media/planet.3f6fb2742f28651730c0.png'/>
+    <h3>Space Travelers' Hub</h3>
     <ul>
       {links.map((link) => (
         <li key={link.text}>
