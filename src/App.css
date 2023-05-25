@@ -37,3 +37,7 @@
     transform: rotate(360deg);
   }
 }
+
+.active-link {
+  color: hsl(0, 100%, 49%);
+}
