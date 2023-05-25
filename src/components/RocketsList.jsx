@@ -18,7 +18,7 @@ const RocketList = () => {
           <Rocket
             key={item.id}
             name={item.name}
-            disc={item.reserved ? (item.disc):(<Badge>Reserved</Badge>,item.disc)}
+            disc={item.reserved ? (<div><span>Reserved </span>{item.disc}</div>):(item.disc)}
             image={item.images}
             Reservation={item.id}
             reservationState={item.reserved ? (<div>Cancel Reservation</div>) : (<div>Reserve rocket</div>)}
