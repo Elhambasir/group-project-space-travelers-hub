@@ -61,9 +61,11 @@ After you're finished please remove all the comments and instructions!
 <!-- PROJECT DESCRIPTION -->
 
 
-# 📖 Math Magicians <a name="about-project"></a>
+# 📖 Space Traveles' Hub <a name="about-project"></a>
 
-It is a calculater has been created by React
+It is a React Page that has the ability to show the mission and rockets from API
+and has the ability to reserve rocket and join a mission and added it to the profile
+and has many pages by React Routes
 
 
 ## 🛠 Built With <a name="built-with"></a>
@@ -79,6 +81,9 @@ It is a calculater has been created by React
 ### Key Features <a name="key-features"></a>
 
 - Single page application
+- Has the ability to Change between the pages by the navbar
+- Has the ability to join and reserve and show it in the profile
+- Has the ability to fetch from the API
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
