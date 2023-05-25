@@ -3,7 +3,6 @@ import { useSelector } from 'react-redux';
 import { Container, ListGroup } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 
-
 function Mission() {
   const mission = useSelector((state) => state.missions);
   const myMission = mission.missions.filter((item) => item.reserved === true);
