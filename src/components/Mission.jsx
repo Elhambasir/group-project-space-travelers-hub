@@ -1,4 +1,3 @@
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
@@ -16,8 +15,7 @@ const Mission = () => {
   const missions = useSelector((store) => store.missions);
   useEffect(() => {
     if (!missions.length) dispatch(fetchMissions());
-  }, []);
-  console.log(missions);
+  }, [dispatch]);
   return (
     <Container className="mt-4 mb-4 bg-light">
       <Table striped responsive bordered hover className="table">
