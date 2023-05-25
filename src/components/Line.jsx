@@ -1,5 +1,3 @@
-const Line = () => {
-    return <div className="Line"></div>
-}
+const Line = () => <div className="Line" />;
 
-export default Line
+export default Line;

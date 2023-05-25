@@ -6,7 +6,14 @@ import 'bootstrap/dist/css/bootstrap.css';
 function Mission() {
   const mission = useSelector((state) => state.missions);
   const myMission = mission.missions.filter((item) => item.reserved === true);
-  if (myMission.length === 0) return (<Container><h3>My Missions</h3>You have not joined any Mission.</Container>);
+  if (myMission.length === 0) {
+    return (
+      <Container>
+        <h3>My Missions</h3>
+        You have not joined any Mission.
+      </Container>
+    );
+  }
   return (
     <Container>
       <h3>My Missions</h3>
@@ -22,7 +29,14 @@ function Mission() {
 const Rocket = () => {
   const Rocket = useSelector((state) => state.rockets);
   const myMission = Rocket.RocketList.filter((item) => item.reserved === true);
-  if (myMission.length === 0) return (<Container><h3>My Rockets</h3>You have not reserved any Rocket.</Container>);
+  if (myMission.length === 0) {
+    return (
+      <Container>
+        <h3>My Rockets</h3>
+        You have not reserved any Rocket.
+      </Container>
+    );
+  }
   return (
     <Container>
       <h3>My Rockets</h3>
@@ -37,7 +51,7 @@ const Rocket = () => {
 
 const MyProfile = () => (
   <>
-   <Container className="d-flex">
+    <Container className="d-flex">
       <Mission />
       <Rocket />
     </Container>

@@ -22,14 +22,14 @@ const RocketList = () => {
             name={item.name}
             disc={item.reserved ? (
               <div>
-                <span className='badge'>Reserved </span>
+                <span className="badge">Reserved </span>
                 {item.disc}
               </div>
             ) : (item.disc)}
             image={item.images}
             Reservation={item.id}
             reservationState={
-              item.reserved ? (<button className='CancelR'>Cancel Reservation</button>) : (<button className='Reservation'>Reserve rocket</button>)
+              item.reserved ? (<button type="button" className="CancelR">Cancel Reservation</button>) : (<button type="button" className="Reservation">Reserve rocket</button>)
 }
           />
         ))}

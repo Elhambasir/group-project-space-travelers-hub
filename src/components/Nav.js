@@ -9,9 +9,12 @@ const links = [
 ];
 const Nav = () => (
   <Container>
-    <img className='Logo'
-    src='https://spacetravellerhubcapstone.netlify.app/static/media/planet.3f6fb2742f28651730c0.png'/>
-    <h3>Space Travelers' Hub</h3>
+    <img
+      className="Logo"
+      src="https://spacetravellerhubcapstone.netlify.app/static/media/planet.3f6fb2742f28651730c0.png"
+      alt="Logo"
+    />
+    <h3>Space Travelers&apos; Hub</h3>
     <ul>
       {links.map((link) => (
         <li key={link.text}>
