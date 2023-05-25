@@ -7,14 +7,14 @@ const Rocket = (props) => {
   const dispatch = useDispatch();
 
   const {
-    id, name, disc, image, Reservation,
+    id, name, disc, image, Reservation, reservationState,
   } = props;
   return (
     <div key={id}>
       <img src={image} alt={name} />
       <div>{name}</div>
       <div>{disc}</div>
-      <button type="button" onClick={() => { dispatch(reservation(Reservation)); }}>Reservation</button>
+      <button type="button" onClick={() => { dispatch(reservation(Reservation)); }}>{reservationState}</button>
     </div>
   );
 };
@@ -25,6 +25,7 @@ Rocket.propTypes = {
   disc: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   Reservation: PropTypes.number.isRequired,
+  reservationState: PropTypes.number.isRequired,
 };
 
 export default Rocket;
