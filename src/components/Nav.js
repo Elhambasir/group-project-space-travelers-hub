@@ -1,4 +1,6 @@
 import { NavLink } from 'react-router-dom';
+import { Container } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
 
 const links = [
   { path: '/Rockets', text: 'Rockets' },
@@ -6,13 +8,15 @@ const links = [
   { path: '/Mission', text: 'Mission' },
 ];
 const Nav = () => (
-  <>
-    {links.map((link) => (
-      <li key={link.text}>
-        <NavLink to={link.path}>{link.text}</NavLink>
-      </li>
-    ))}
-  </>
+  <Container>
+    <ul>
+      {links.map((link) => (
+        <li key={link.text}>
+          <NavLink to={link.path}>{link.text}</NavLink>
+        </li>
+      ))}
+    </ul>
+  </Container>
 );
 
 export default Nav;
