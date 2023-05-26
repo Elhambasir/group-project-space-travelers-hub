@@ -1,8 +1,8 @@
-.m-2{
+.m-2 {
   text-decoration: none;
 }
 
-.link{
+.link {
   text-decoration: none;
 }
 
@@ -21,44 +21,41 @@
   margin-right: 30px;
 }
 
-.missionC{
+.missionC {
   margin-left: 30px;
   margin-right: 30px;
   margin-top: 30px;
 }
 
-.Acbtn button{
-
+.Acbtn button {
   width: 100px;
-
 }
 
-.ActiveM{
+.ActiveM {
   padding-top: 100px;
 }
 
-
 .badge {
-  background-color: #ffffff;
+  background-color: #fff;
   color: rgba(255, 255, 255, 0.238);
   padding: 4px 8px;
   text-align: center;
   border-radius: 5px;
 }
 
-.Mbtn{
+.Mbtn {
   width: 150px;
 }
 
-.red{
+.red {
   border-radius: 3px;
   text-align: center;
   color: red;
   border-color: red;
 }
 
-.Join{
-  background-color: #ffffff;
+.Join {
+  background-color: #fff;
   color: rgb(103, 103, 103);
   border-color: rgb(103, 103, 103);
   border-radius: 3px;

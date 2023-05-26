@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { Badge, Button } from 'react-bootstrap';
+import { Badge } from 'react-bootstrap';
 import Table from 'react-bootstrap/Table';
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -30,7 +30,7 @@ const Mission = () => {
               <td>{item.name}</td>
               <td>{item.desc}</td>
               <td className="Acbtn"><Badge bg={!item.reserved ? 'secondary' : ''}>{!item.reserved ? 'NOT A MEMBER' : 'Active Member'}</Badge></td>
-              <td className="Mbtn"><button as="a" className={!item.reserved ? 'Join' : 'red'} onClick={() => (item.reserved ? dispatch(joinMission(item.id)) : dispatch(leaveMission(item.id)))}>{!item.reserved ? 'Join Mission' : 'Leave Mission'}</button></td>
+              <td className="Mbtn"><button type="button" className={!item.reserved ? 'Join' : 'red'} onClick={() => (item.reserved ? dispatch(joinMission(item.id)) : dispatch(leaveMission(item.id)))}>{!item.reserved ? 'Join Mission' : 'Leave Mission'}</button></td>
             </tr>
           ))}
         </tbody>
