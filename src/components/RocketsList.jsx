@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { getAPI,reservation } from '../redux/Rockets/rocketsSlice';
+import { getAPI, reservation } from '../redux/Rockets/rocketsSlice';
 
 const RocketList = () => {
   const dispatch = useDispatch();
@@ -15,7 +15,7 @@ const RocketList = () => {
     return <div>Loading</div>;
   } if (isLoading === false) {
     return (
-      <div>
+      <div data-testid="RocketList">
         {RocketList.map((item) => (
           <Rocket
             key={item.id}
@@ -38,7 +38,6 @@ const RocketList = () => {
   }
   return <div>{error}</div>;
 };
-
 
 const Rocket = (props) => {
   const dispatch = useDispatch();
