@@ -30,7 +30,7 @@ After you're finished please remove all the comments and instructions!
   <img/>
   <br/>
 
-  <h3><b>Read me</b></h3>
+  <h3><b>Space Traveles' Hub</b></h3>
 
 </div>
 
