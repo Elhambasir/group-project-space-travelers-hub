@@ -23,9 +23,9 @@
 }
 
 .Reservation {
-  background-color: rgb(15, 95, 164);
+  background-color: #007bff;
   color: rgb(255, 255, 255);
-  border: solid rgb(8, 18, 109) 2px;
+  border: solid #007bff 2px;
   height: 35px;
   margin-top: 30px;
   border-radius: 8%;
@@ -36,7 +36,7 @@
 }
 
 .badge {
-  background-color: rgb(12, 185, 87);
+  background-color: #18a2b8;
   color: white;
   padding: 4px 8px;
   text-align: center;
