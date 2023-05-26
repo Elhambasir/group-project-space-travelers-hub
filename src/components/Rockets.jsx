@@ -9,13 +9,17 @@ const Rocket = (props) => {
   const {
     id, name, disc, image, Reservation, reservationState,
   } = props;
+  /* eslint-disable */
   return (
-    <div key={id}>
-      <img src={image} alt={name} />
-      <div>{name}</div>
-      <div>{disc}</div>
-      <button type="button" onClick={() => { dispatch(reservation(Reservation)); }}>{reservationState}</button>
+    <div className="rocketC" key={id}>
+      <img className="rocketImg" src={image} alt={name} />
+      <div className="contentC">
+        <h4 className="rocektName">{name}</h4>
+        <div className="rocketDesc">{disc}</div>
+        <div type="button" onClick={() => { dispatch(reservation(Reservation)); }}>{reservationState}</div>
+      </div>
     </div>
+    /* eslint-enable */
   );
 };
 
