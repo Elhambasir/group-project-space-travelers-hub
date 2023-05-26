@@ -16,20 +16,24 @@ const Mission = () => {
   return (
     <Container className="mt-4 mb-4 bg-light">
       <Table striped responsive bordered hover className="table">
-        <tr>
-          <th>Mission</th>
-          <th>Description</th>
-          <th>Status</th>
-          <th> </th>
-        </tr>
-        {missions.missions.map((item) => (
-          <tr key={item.id}>
-            <td>{item.name}</td>
-            <td>{item.desc}</td>
-            <td><Badge bg={!item.reserved ? 'secondary' : 'success'}>{!item.reserved ? 'NOT A MEMBER' : 'Active Member'}</Badge></td>
-            <td><Button as="a" className={!item.reserved ? 'bg-primary' : 'bg-danger'} onClick={() => (item.reserved ? dispatch(joinMission(item.id)) : dispatch(leaveMission(item.id)))}>{!item.reserved ? 'Join Mission' : 'Leave Mission'}</Button></td>
+        <thead>
+          <tr>
+            <th>Mission</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th> </th>
           </tr>
-        ))}
+        </thead>
+        <tbody>
+          {missions.missions.map((item) => (
+            <tr key={item.id}>
+              <td>{item.name}</td>
+              <td>{item.desc}</td>
+              <td><Badge bg={!item.reserved ? 'secondary' : 'success'}>{!item.reserved ? 'NOT A MEMBER' : 'Active Member'}</Badge></td>
+              <td><Button as="a" className={!item.reserved ? 'bg-primary' : 'bg-danger'} onClick={() => (item.reserved ? dispatch(joinMission(item.id)) : dispatch(leaveMission(item.id)))}>{!item.reserved ? 'Join Mission' : 'Leave Mission'}</Button></td>
+            </tr>
+          ))}
+        </tbody>
       </Table>
     </Container>
   );
