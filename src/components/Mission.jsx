@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { Badge, Button, Container } from 'react-bootstrap';
+import { Badge, Button } from 'react-bootstrap';
 import Table from 'react-bootstrap/Table';
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -14,7 +14,7 @@ const Mission = () => {
   const missions = useSelector((state) => state.missions);
 
   return (
-    <Container className="mt-4 mb-4 bg-light">
+    <div className="missionC">
       <Table striped responsive bordered hover className="table">
         <thead>
           <tr>
@@ -29,13 +29,13 @@ const Mission = () => {
             <tr key={item.id}>
               <td>{item.name}</td>
               <td>{item.desc}</td>
-              <td><Badge bg={!item.reserved ? 'secondary' : 'success'}>{!item.reserved ? 'NOT A MEMBER' : 'Active Member'}</Badge></td>
-              <td><Button as="a" className={!item.reserved ? 'bg-primary' : 'bg-danger'} onClick={() => (item.reserved ? dispatch(joinMission(item.id)) : dispatch(leaveMission(item.id)))}>{!item.reserved ? 'Join Mission' : 'Leave Mission'}</Button></td>
+              <td className="Acbtn"><Badge bg={!item.reserved ? 'secondary' : ''}>{!item.reserved ? 'NOT A MEMBER' : 'Active Member'}</Badge></td>
+              <td className="Mbtn"><button as="a" className={!item.reserved ? 'Join' : 'red'} onClick={() => (item.reserved ? dispatch(joinMission(item.id)) : dispatch(leaveMission(item.id)))}>{!item.reserved ? 'Join Mission' : 'Leave Mission'}</button></td>
             </tr>
           ))}
         </tbody>
       </Table>
-    </Container>
+    </div>
   );
 };
 

@@ -20,3 +20,46 @@
   margin-left: 30px;
   margin-right: 30px;
 }
+
+.missionC{
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 30px;
+}
+
+.Acbtn button{
+
+  width: 100px;
+
+}
+
+.ActiveM{
+  padding-top: 100px;
+}
+
+
+.badge {
+  background-color: #ffffff;
+  color: rgba(255, 255, 255, 0.238);
+  padding: 4px 8px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.Mbtn{
+  width: 150px;
+}
+
+.red{
+  border-radius: 3px;
+  text-align: center;
+  color: red;
+  border-color: red;
+}
+
+.Join{
+  background-color: #ffffff;
+  color: rgb(103, 103, 103);
+  border-color: rgb(103, 103, 103);
+  border-radius: 3px;
+}
