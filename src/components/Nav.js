@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 
 const links = [
-  { path: '/Rockets', text: 'Rockets' },
+  { path: '/', text: 'Rockets' },
   { path: '/Mission', text: 'Mission' },
   { path: '/MyProfile', text: 'My Profile' },
 ];
