@@ -4,7 +4,7 @@ import './App.css';
 import './styles/Rocket.css';
 import MyProfile from './components/MyProfile';
 import RocketList from './components/RocketsList';
-import Missions from './components/Mission';
+import Mission from './components/Mission';
 import Line from './components/Line';
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
         <Routes path="/" element={<RocketList />}>
           <Route index element={<RocketList />} />
           <Route path="/MyProfile" element={<MyProfile />} />
-          <Route path="/Mission" element={<Missions />} />
+          <Route path="/Mission" element={<Mission />} />
           <Route path="*" element={<h3>No Match</h3>} />
         </Routes>
       </BrowserRouter>

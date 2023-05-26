@@ -5,7 +5,7 @@ import RocketList from '../components/RocketsList';
 import store from '../redux/store';
 
 describe('Component render testing', () => {
-  it('Mission page renders correctly', () => {
+  it('RocketList page renders correctly', () => {
     const { asFragment } = render(
       <Provider store={store}>
         <RocketList />

@@ -1,60 +1,65 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component render testing Line page renders correctly 1`] = `
-<DocumentFragment>
+exports[`My app renders correctly 1`] = `
+Array [
   <div
-    class="d-flex flex-wrap align-items-center p-3 container"
+    className="d-flex flex-wrap align-items-center p-3 container"
   >
     <img
       alt="Logo"
-      class="Logo"
+      className="Logo"
       src="https://spacetravellerhubcapstone.netlify.app/static/media/planet.3f6fb2742f28651730c0.png"
     />
     <h3>
       Space Travelers' Hub
     </h3>
     <ul
-      class="list-unstyled m-2 p-2 d-flex flex-wrap"
-      style="justify-content: flex-end; flex: 2;"
+      className="list-unstyled m-2 p-2 d-flex flex-wrap"
+      style={
+        Object {
+          "flex": "2",
+          "justifyContent": "flex-end",
+        }
+      }
     >
       <li
-        class="m-2"
+        className="m-2"
       >
         <a
           aria-current="page"
-          class="active-link"
+          className="active-link"
           href="/"
+          onClick={[Function]}
         >
           Rockets
         </a>
       </li>
       <li
-        class="m-2"
+        className="m-2"
       >
         <a
-          class="link"
+          className="link"
           href="/Mission"
+          onClick={[Function]}
         >
           Mission
         </a>
       </li>
       <li
-        class="m-2"
+        className="m-2"
       >
         <a
-          class="link"
+          className="link"
           href="/MyProfile"
+          onClick={[Function]}
         >
           My Profile
         </a>
       </li>
     </ul>
-  </div>
-  <div
-    class="Line"
-  />
+  </div>,
   <div>
     Loading
-  </div>
-</DocumentFragment>
+  </div>,
+]
 `;
