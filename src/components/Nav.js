@@ -18,7 +18,7 @@ const Nav = () => (
     <ul className="list-unstyled m-2 p-2 d-flex flex-wrap" style={{ justifyContent: 'flex-end', flex: '2' }}>
       {links.map((link) => (
         <li key={link.text} className="m-2">
-          <NavLink className={({ isActive }) => (isActive ? 'active-link' : 'link')} to={link.path} >{link.text}</NavLink>
+          <NavLink className={({ isActive }) => (isActive ? 'active-link' : 'link')} to={link.path}>{link.text}</NavLink>
         </li>
       ))}
     </ul>
