@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import Rocket from './Rockets';
-import { getAPI } from '../redux/Rockets/rocketsSlice';
+import PropTypes from 'prop-types';
+import { getAPI,reservation } from '../redux/Rockets/rocketsSlice';
 
 const RocketList = () => {
   const dispatch = useDispatch();
@@ -37,6 +37,36 @@ const RocketList = () => {
     );
   }
   return <div>{error}</div>;
+};
+
+
+const Rocket = (props) => {
+  const dispatch = useDispatch();
+
+  const {
+    id, name, disc, image, Reservation, reservationState,
+  } = props;
+  /* eslint-disable */
+  return (
+    <div className="rocketC" key={id}>
+      <img className="rocketImg" src={image} alt={name} />
+      <div className="contentC">
+        <h4 className="rocektName">{name}</h4>
+        <div className="rocketDesc">{disc}</div>
+        <div type="button" onClick={() => { dispatch(reservation(Reservation)); }}>{reservationState}</div>
+      </div>
+    </div>
+    /* eslint-enable */
+  );
+};
+
+Rocket.propTypes = {
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  disc: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  Reservation: PropTypes.number.isRequired,
+  reservationState: PropTypes.number.isRequired,
 };
 
 export default RocketList;
