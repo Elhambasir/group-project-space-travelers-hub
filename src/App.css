@@ -1,5 +1,13 @@
+.m-2{
+  text-decoration: none;
+}
+
+.link{
+  text-decoration: none;
+}
+
 .active-link {
-  color: hsl(0, 100%, 49%);
+  text-decoration: underline;
 }
 
 .Logo {
