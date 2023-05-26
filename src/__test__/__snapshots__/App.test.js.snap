@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component render testing Line page renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="d-flex flex-wrap align-items-center p-3 container"
+  >
+    <img
+      alt="Logo"
+      class="Logo"
+      src="https://spacetravellerhubcapstone.netlify.app/static/media/planet.3f6fb2742f28651730c0.png"
+    />
+    <h3>
+      Space Travelers' Hub
+    </h3>
+    <ul
+      class="list-unstyled m-2 p-2 d-flex flex-wrap"
+      style="justify-content: flex-end; flex: 2;"
+    >
+      <li
+        class="m-2"
+      >
+        <a
+          class="link"
+          href="/Rockets"
+          style="text-decoration: none;"
+        >
+          Rockets
+        </a>
+      </li>
+      <li
+        class="m-2"
+      >
+        <a
+          class="link"
+          href="/Mission"
+          style="text-decoration: none;"
+        >
+          Mission
+        </a>
+      </li>
+      <li
+        class="m-2"
+      >
+        <a
+          class="link"
+          href="/MyProfile"
+          style="text-decoration: none;"
+        >
+          My Profile
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div
+    class="Line"
+  />
+  <h3>
+    No Match
+  </h3>
+</DocumentFragment>
+`;

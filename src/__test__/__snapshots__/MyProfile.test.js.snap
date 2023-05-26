@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component render testing MyProfile page renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="d-flex container"
+  >
+    <div
+      class="container"
+    >
+      <h3>
+        My Missions
+      </h3>
+      You have not joined any Mission.
+    </div>
+    <div
+      class="container"
+    >
+      <h3>
+        My Rockets
+      </h3>
+      You have not reserved any Rocket.
+    </div>
+  </div>
+</DocumentFragment>
+`;
