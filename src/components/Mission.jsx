@@ -29,8 +29,8 @@ const Mission = () => {
             <tr key={item.id}>
               <td>{item.name}</td>
               <td>{item.desc}</td>
-              <td className="Acbtn"><Badge bg={!item.reserved ? 'secondary' : ''}>{!item.reserved ? 'NOT A MEMBER' : 'Active Member'}</Badge></td>
-              <td className="Mbtn"><button type="button" className={!item.reserved ? 'Join' : 'red'} onClick={() => (item.reserved ? dispatch(joinMission(item.id)) : dispatch(leaveMission(item.id)))}>{!item.reserved ? 'Join Mission' : 'Leave Mission'}</button></td>
+              <td className="Acbtn text-center align-middle"><Badge bg={!item.reserved ? 'secondary' : ''}>{!item.reserved ? 'NOT A MEMBER' : 'Active Member'}</Badge></td>
+              <td className="Mbtn text-center align-middle"><button type="button" className={!item.reserved ? 'Join' : 'red'} onClick={() => (item.reserved ? dispatch(joinMission(item.id)) : dispatch(leaveMission(item.id)))}>{!item.reserved ? 'Join Mission' : 'Leave Mission'}</button></td>
             </tr>
           ))}
         </tbody>
